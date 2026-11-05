@@ -1,0 +1,169 @@
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 100vh;          /* was height: 100vh */
+    min-height: 100dvh;         /* better on mobile browsers */
+}
+
+/* ---------- Header ---------- */
+.headerPart {
+    background-image:
+        linear-gradient(rgba(81, 0, 255, 0.89), rgba(82, 0, 255, 0.6)),
+        url("./bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1.5em;
+    min-height: 40vh;           /* was height: 40% — percentage heights need a parent height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.75em;                /* replaces the negative-margin hack */
+}
+
+.headerPart h1 {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);   /* responsive sizing */
+    margin: 0;                  /* no negative margin needed */
+}
+
+.headerPart p {
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+    margin: 0;
+}
+
+/* ---------- Form (mobile-first) ---------- */
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    gap: 0.5em;
+}
+
+label {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+input {
+    padding: 0.8em;
+    border: 1px solid #ccc;
+    background-color: #eaeaea;
+    border-radius: 2px;
+    font: inherit;
+    width: 100%;
+}
+
+input:focus {
+    outline: 2px solid #5100ff;
+    outline-offset: 1px;
+}
+
+button {
+    padding: 1em 1.5em;
+    background-color: #5100ff;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    align-self: flex-start;     /* left-aligned, content-sized */
+    margin-top: 0.5em;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #3d00c2;
+}
+
+/* ---------- Tablet (≥600px) ---------- */
+@media (min-width: 600px) {
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em 1.25em;
+        align-items: start;     /* was `end` — start aligns labels at top of cells */
+    }
+
+    /* Labels on row 1, inputs on row 2, button on row 3 */
+    label[for="name"]  { grid-column: 1; grid-row: 1; }
+    label[for="email"] { grid-column: 2; grid-row: 1; }
+
+    input#name  { grid-column: 1; grid-row: 2; }
+    input#email { grid-column: 2; grid-row: 2; }
+
+    button {
+        grid-column: 1 / -1;
+        grid-row: 3;
+        justify-self: start;
+        width: max-content;
+    }
+}
+
+/* ---------- Desktop (≥1024px) ---------- */
+@media (min-width: 1024px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 100vh;
+    }
+
+    .headerPart {
+        height: 100%;
+        padding: 4em;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 4em;
+        height: 100%;
+        max-width: 800px;
+    }
+
+    form input,
+    form label,
+    form button {
+        flex: 0 0 auto;   /* stop growing/shrinking in the flex column */
+    }
+
+    input {
+        height: 3em;      /* lock a sane height */
+        max-height: 3em;  /* prevent any vertical growth */
+    }
+
+    /* (your existing reset + button rules stay) */
+    label,
+    input,
+    button {
+        grid-column: auto;
+        grid-row: auto;
+        width: 100%;
+    }
+
+    button {
+        width: max-content;
+        align-self: flex-start;
+        margin-top: 1em;
+    }
+}

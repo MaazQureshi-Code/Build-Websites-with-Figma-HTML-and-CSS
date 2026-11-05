@@ -1,11 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Landing Page</title>
-</head>
-<body>          
-    
-</body>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        
+        <div class="container">
+            
+            <div class="headerPart">
+               <h1>Got Marketing?<br>Advance Your <br> Business Insight.</h1>
+                <p>Fill out the form and receive our award winning newsletter.</p>
+            </div>
+            <div>
+                <form>
+                       <label for="name">Name</label>
+                        <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        autocomplete="name"
+                        placeholder="Ada Lovelace"
+                        required
+                        >
+                         <label for="email">Email</label>
+                        <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        autocomplete="email"
+                        placeholder="you@example.com"
+                        required
+                        >
+                        <button type="submit">Sign up</button>
+                </form>
+            </div>
+        </div>
+        
+    </body>
 </html>
