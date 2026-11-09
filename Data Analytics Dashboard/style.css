@@ -28,10 +28,9 @@ header {
     align-items: center;
     padding: 10px 20px;
 }
-
 a{
     color: #2D7DFF;
-    font-weight: 800;
+    font-weight: 801;
     font-size: 2rem;
     text-decoration: none;
     position: absolute;
@@ -40,7 +39,6 @@ a{
     letter-spacing: -12%;
  
 }
-
 button{
     border: none;
     background-color: black;
