@@ -1,4 +1,6 @@
 // 1. Get all the elements we need
+
+// i will understand the code then i will check css then fix the logo other staff myself
 const menuToggle = document.querySelector('.menu-toggle');
 const menuItems = document.querySelector('.menu-items');
 const arrowBtn = document.querySelector('.arrow'); // <--- NEW
