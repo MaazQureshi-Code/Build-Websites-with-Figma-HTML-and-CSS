@@ -1,6 +1,7 @@
 // 1. Get all the elements we need
 
 // i will understand the code then i will check css then fix the logo other staff myself
+// check it is i forgot to put the liner gradient in it
 const menuToggle = document.querySelector('.menu-toggle');
 const menuItems = document.querySelector('.menu-items');
 const arrowBtn = document.querySelector('.arrow'); // <--- NEW
