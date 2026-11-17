@@ -1,29 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Dashboard</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <div class="container">
-        <header class="navbar">
-            <!-- 1. The button is just the icon -->
-            <button class="menu-toggle" aria-label="Open the menu">
-                <img src="./menu.svg" class="hamburger-img" />
-            </button>
-            <nav class="menu-items">
-                <button class="arrow"><img src="./arrow (1).svg" alt=""></button>
-                <a href="#">HOME</a>
-                <a href="#">MY STATS</a>
-                <a href="#">MEMBERS</a>
-                <a href="#">SETTINGS</a>
-                <a href="#">HELP</a>
-            </nav> 
-           <a href="/" class="logo">LOGO</a>
-        </header>
-    <script src="./script.js"></script>
-    </div>
-</body>
+<html>
+    <head>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="left-col">
+                <nav>
+                    <img src="./arrow.svg" class="back-btn">
+                    <ul>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">My Stats</a></li>
+                        <li><a href="#">Members</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <section>
+                <header>
+                    <img src="menu.svg" class="menu-btn">
+                    <p class="logo">Logo</p>
+                </header>
+                <div class="cv">
+                    <div class="content">
+                        <h1>Data Analytics</h1>
+                        <p>Making sense of your traffic.</p>
+                        
+                        <a href="#" class="cta">Go to my stats</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <script src="./script.js"></script>
+    </body>
 </html>
